@@ -26,7 +26,7 @@ public class Code_04_SerializeAndReconstructTree {
 	}
 
 	public static Node reconByPreString(String preStr) {
-		String[] values = preStr.split("!");
+		String[] values = preStr.split("!");  //用split分割变为数组，送入队列
 		Queue<String> queue = new LinkedList<String>();
 		for (int i = 0; i != values.length; i++) {
 			queue.offer(values[i]);
@@ -39,10 +39,10 @@ public class Code_04_SerializeAndReconstructTree {
 		if (value.equals("#")) {
 			return null;
 		}
-		Node head = new Node(Integer.valueOf(value));
-		head.left = reconPreOrder(queue);
-		head.right = reconPreOrder(queue);
-		return head;
+		Node head = new Node(Integer.valueOf(value)); //Integer.valueOf返回一个表示指定的value值的integer实例
+		head.left = reconPreOrder(queue); //建立左子树
+		head.right = reconPreOrder(queue);//建立右子树
+		return head; //返回头结点
 	}
 
 	public static String serialByLevel(Node head) {

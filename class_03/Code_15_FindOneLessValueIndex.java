@@ -1,3 +1,4 @@
+//根据问题本身决定是否二分，不一定有序才能二分！
 package class_03;
 
 public class Code_15_FindOneLessValueIndex {
@@ -36,7 +37,7 @@ public class Code_15_FindOneLessValueIndex {
 	}
 
 	public static void main(String[] args) {
-		int[] arr = { 6, 5, 3, 4, 6, 7, 8 };
+		int[] arr = { 8,7, 8, 6, 7, 8, 9, 10,11 };
 		printArray(arr);
 		int index = getLessIndex(arr);
 		System.out.println("index: " + index + ", value: " + arr[index]);

@@ -10,8 +10,9 @@ public class Code_07_ReverseList {
 			this.value = data;
 		}
 	}
-
-	public static Node reverseList(Node head) {
+    
+	//静态方法
+	public static Node reverseList(Node head) { //返回类型是节点类型Node
 		Node pre = null;
 		Node next = null;
 		while (head != null) {
